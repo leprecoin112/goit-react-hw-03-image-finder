@@ -18,13 +18,15 @@ class App extends Component {
   };
 
   handleFormSubmit = value => {
-    this.setState({
-      valueSearch: value,
-      page: 1,
-      items: [],
-      isLoadMore: false,
-      isLoader: false,
-    });
+    if (this.state.valueSearch !== value) {
+      this.setState({
+        valueSearch: value,
+        page: 1,
+        items: [],
+        isLoadMore: false,
+        isLoader: false,
+      });
+    }
   };
 
   loadMore = () => {

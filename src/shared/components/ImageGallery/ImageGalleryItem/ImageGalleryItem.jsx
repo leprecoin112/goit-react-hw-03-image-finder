@@ -9,8 +9,10 @@ class ImageGalleryItem extends Component {
     visible: false,
   };
 
-  toggleModal = () => {
-    this.setState(prevState => ({ visible: !prevState.visible }));
+  toggleModal = e => {
+    if (e.target.dataset.action !== 'visible') {
+      this.setState(prevState => ({ visible: !prevState.visible }));
+    }
   };
   render() {
     const { smallImg, description, largeImageURL } = this.props;

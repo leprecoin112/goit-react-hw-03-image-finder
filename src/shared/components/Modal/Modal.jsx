@@ -10,7 +10,7 @@ function Modal({ description, largeImageURL, onClick }) {
         <button type="button" className={styles.Button}>
           <BsXCircle className={styles.Icon} />
         </button>
-        <img src={largeImageURL} alt={description} />
+        <img src={largeImageURL} alt={description} data-action="visible" />
       </div>
     </div>
   );
